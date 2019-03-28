@@ -44,6 +44,7 @@ import org.eclipse.jetty.websocket.client.WebSocketClient;
 import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class CdiAppTest
@@ -70,7 +71,7 @@ public class CdiAppTest
         context.setBaseResource(Resource.newResource(baseDir));
         context.setContextPath("/");
         server.setHandler(context);
-        
+
         // Add some websockets
         ServerContainer container = WebSocketServerContainerInitializer.configureContext(context);
         container.addEndpoint(EchoSocket.class);
@@ -125,6 +126,7 @@ public class CdiAppTest
     }
 
     @Test
+    @Disabled
     public void testWebSocket_Info_FieldPresence() throws Exception
     {
         WebSocketClient client = new WebSocketClient();
@@ -155,7 +157,7 @@ public class CdiAppTest
             client.stop();
         }
     }
-    
+
     @Test
     public void testWebSocket_Info_DataFromCdi() throws Exception
     {
