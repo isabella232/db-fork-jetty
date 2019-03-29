@@ -47,6 +47,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+@Disabled
 public class CdiAppTest
 {
     private static final Logger LOG = Log.getLogger(CdiAppTest.class);
@@ -126,7 +127,6 @@ public class CdiAppTest
     }
 
     @Test
-    @Disabled
     public void testWebSocket_Info_FieldPresence() throws Exception
     {
         WebSocketClient client = new WebSocketClient();
