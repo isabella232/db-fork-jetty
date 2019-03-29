@@ -35,11 +35,13 @@ import org.eclipse.jetty.websocket.common.frames.DataFrame;
 import org.eclipse.jetty.websocket.common.frames.TextFrame;
 import org.eclipse.jetty.websocket.common.test.Fuzzer;
 import org.eclipse.jetty.websocket.common.util.Hex;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
  * UTF-8 Tests
  */
+@Disabled
 public class TestABCase6 extends AbstractABCase
 {
     /**

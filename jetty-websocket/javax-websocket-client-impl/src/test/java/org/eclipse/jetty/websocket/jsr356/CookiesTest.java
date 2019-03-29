@@ -71,16 +71,20 @@ public class CookiesTest
     @AfterEach
     public void stopServer() throws Exception
     {
-        server.stop();
+        try {
+          server.stop();
+        } catch (Exception e) {
+          // Ignore
+        }
     }
-    
+
     @Test
     public void testCookiesAreSentToServer() throws Exception
     {
         final String cookieName = "name";
         final String cookieValue = "value";
         final String cookieString = cookieName + "=" + cookieValue;
-        
+
         startServer(new EchoHandler()
         {
             @Override

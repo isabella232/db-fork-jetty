@@ -54,6 +54,7 @@ import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 import org.eclipse.jetty.websocket.tests.CloseTrackingEndpoint;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
@@ -294,6 +295,7 @@ public class ClientCloseTest
     }
 
     @Test
+    @Disabled
     public void testStopLifecycle() throws Exception
     {
         // Set client timeout
