@@ -67,6 +67,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 
+@Disabled
 public class ClientCloseTest
 {
     private Server server;
@@ -295,7 +296,6 @@ public class ClientCloseTest
     }
 
     @Test
-    @Disabled
     public void testStopLifecycle() throws Exception
     {
         // Set client timeout
