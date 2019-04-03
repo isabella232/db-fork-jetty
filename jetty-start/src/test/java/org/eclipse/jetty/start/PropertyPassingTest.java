@@ -38,9 +38,11 @@ import org.eclipse.jetty.toolchain.test.IO;
 import org.eclipse.jetty.toolchain.test.MavenTestingUtils;
 import org.eclipse.jetty.toolchain.test.jupiter.WorkDir;
 import org.eclipse.jetty.toolchain.test.jupiter.WorkDirExtension;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+@Disabled
 @ExtendWith(WorkDirExtension.class)
 public class PropertyPassingTest
 {
@@ -96,7 +98,7 @@ public class PropertyPassingTest
     }
 
     public WorkDir testingdir;
-    
+
     @Test
     public void testAsJvmArg() throws IOException, InterruptedException
     {
@@ -161,7 +163,7 @@ public class PropertyPassingTest
 
         // Run command, collect output
         String output = collectRunOutput(commands);
-        
+
         // Test for values
         assertThat(output,containsString("test.foo=bar"));
     }
